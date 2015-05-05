@@ -57,6 +57,21 @@ h = 0.01.*4.*exp(-8.*t);
 x = ones (1, 60);
 y = conv(x, h);
 figure;
-plot(t(1:600),y(1:60));
+plot(t(1:60),y(1:60));
 
+
+%% 6abc
+
+[x, fs] = wavread('BUZZE1');
+
+fs1 = round(fs*0.3);
+
+h = zeros(fs1, 1);
+h(1) = 1;
+h(fs1/2) = 1/4;
+h(fs1) = 1;
+
+y = conv(x, h);
+
+soundsc(y, fs);
 

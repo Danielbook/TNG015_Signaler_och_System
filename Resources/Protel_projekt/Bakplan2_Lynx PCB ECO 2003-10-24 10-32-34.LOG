@@ -1,0 +1,6 @@
+Added Component: Designator=Skruvplint-1(Plint12)
+Added Component: Designator=Skruvplint-2(Plint12)
+Added Pin To Net: NetName=A12 Pin=Skruvplint-1-A12
+Added Pin To Net: NetName=A24 Pin=Skruvplint-2-A12
+Added Member To Class: ClassName=Schema2_bakplan_Lynx Member=Component Skruvplint-1 MHDR1X12
+Added Member To Class: ClassName=Schema2_bakplan_Lynx Member=Component Skruvplint-2 MHDR1X12

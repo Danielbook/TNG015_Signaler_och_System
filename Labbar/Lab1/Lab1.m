@@ -60,6 +60,20 @@ figure;
 plot(t(1:60),y(1:60));
 
 
-%% 6a
+%% 6abc
 
-[x,fs]=wavread('nocturne');
+[x, fs] = wavread('BUZZE1');
+
+fs1 = round(fs*0.3);
+
+h = zeros(fs1, 1);
+h(1) = 1;
+h(fs1/2) = 1;
+h(fs1) = 1;
+
+y = conv(x, h);
+
+soundsc(y, fs);
+
+%% 7
+
