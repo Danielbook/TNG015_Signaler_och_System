@@ -119,9 +119,89 @@ X_magn=abs(X)/(N/2);
 plot(f,X_magn(1:length(f)));
 grid;
 
-
 %% 15
-clear all; clc;
+clear all; clc; close all;
 load('phonenumber.mat')
+
+y1 = y(1:1000);
+y2 = y(1200:2200);
+y3 = y(2400:3400);
+y4 = y(3600:4600);
+y5 = y(4800:5800);
+y6 = y(6000:7000);
+y7 = y(7200:8200);
+
+Y1 = fft(y1);
+Y2 = fft(y2);
+Y3 = fft(y3);
+Y4 = fft(y4);
+Y5 = fft(y5);
+Y6 = fft(y6);
+Y7 = fft(y7);
+
+f1 = 0: fs/length(Y1):fs/2;
+figure;
+plot( f1(1:350), abs( Y1(1:350) ) );
+
+f2 = 0: fs/length(Y2):fs/2;
+figure;
+plot( f2(1:350), abs( Y2(1:350) ) );
+
+f3 = 0: fs/length(Y3):fs/2;
+figure;
+plot( f3(1:350), abs( Y3(1:350) ) );
+
+f4 = 0: fs/length(Y4):fs/2;
+figure;
+plot( f4(1:350), abs( Y4(1:350) ) );
+
+f5 = 0: fs/length(Y5):fs/2;
+figure;
+plot( f5(1:350), abs( Y5(1:350) ) );
+
+f6 = 0: fs/length(Y6):fs/2;
+figure;
+plot( f6(1:350), abs( Y6(1:350) ) );
+
+f7 = 0: fs/length(Y7):fs/2;
+figure;
+plot( f7(1:350), abs( Y7(1:350) ) );
+
+%% 10
+%a
+clear all; clc; close all;
+load('balk.mat')
+
+f = linspace( 0, 400, 1024 );
+
+Y11 = fft(y11);
+Y12 = fft(y12);
+Y21 = fft(y21);
+Y22 = fft(y22);
+Y31 = fft(y31);
+Y32 = fft(y32);
+
+figure;
+plot( f(1:500), abs( Y11(1:500) ) );
+
+figure;
+plot( f(1:500), abs( Y12(1:500) ) );
+
+figure;
+plot( f(1:500), abs( Y21(1:500) ) );
+
+figure;
+plot( f(1:500), abs( Y22(1:500) ) );
+
+figure;
+plot( f(1:500), abs( Y31(1:500) ) );
+
+figure;
+plot( f(1:500), abs( Y32(1:500) ) );
+
+%b
+
+
+
 
 
