@@ -31,12 +31,11 @@ plot(t,y);
 %% 8
 clear all; clc;
 
-x = ones(1, 50);
-x(1) = 0;   %motsvarar x[-1] = 0
+Ts=1/10;
 y(1) = 0;
 
 for n=2:1:50
-    y(n) = 0.05*x(n-1) + 0.6*y(n-1);   
+    y(n) = 0.05*exp(1-n*Ts) + 0.6*y(n-1);   
 end
 
 figure;
